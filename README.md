@@ -1,7 +1,5 @@
 # Consumer Finance
-Scan code for report
-
-<img width="190" height="217" alt="image" src="https://github.com/user-attachments/assets/e4065eda-c202-4361-a1f5-dd4c4e036240" />
+Link to report: https://app.powerbi.com/links/D4fpITgyVz?ctid=b065f3d5-e27a-4caf-9216-790f5cdfe5ee&pbi_source=linkShare
 
 ## Table of Contents
 -	[Project Overview](#project-overview)

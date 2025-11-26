@@ -1,5 +1,5 @@
 # Consumer Finance
-<iframe title="ConsumerFinance" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=0ce5f813-bcef-4b36-bc6d-83067141bc91&autoAuth=true&ctid=b065f3d5-e27a-4caf-9216-790f5cdfe5ee" frameborder="0" allowFullScreen="true"></iframe>
+Link to Report : https://app.powerbi.com/reportEmbed?reportId=0ce5f813-bcef-4b36-bc6d-83067141bc91&autoAuth=true&ctid=b065f3d5-e27a-4caf-9216-790f5cdfe5ee
 
 ## Table of Contents
 -	[Project Overview](#project-overview)
@@ -40,25 +40,31 @@ The following tasks were performed:
 
 ## Interesting Codes
 1. DAX for displaying filter categories:
-#SELECTED FILTER CATEGORY = 
+
+SELECTED FILTER CATEGORY = 
+
 VAR Maxfilters = 3
+
 RETURN (
-//Date, Month
-    IF(
+    
+    IF( //Date, Month
         OR(ISFILTERED('Date Table'[Year]), ISFILTERED('Date Table'[Mo_Short])),
         VAR __x = "Year/Month Submitted"
         RETURN __x & UNICHAR(13) & UNICHAR(10)
     )&
-//Day
-    IF(
+    IF( //Day
         ISFILTERED('Date Table'[Day]), 
         VAR __x = "Day"
         RETURN __x & UNICHAR(13) & UNICHAR(10)
     )& ...
     )
+    
 #SELECTED FILTERS = 
+
 VAR Maxfilters = 3
+
 RETURN (
+    
     IF( //YEAR & MONTH
         OR(ISFILTERED('Date Table'[Year]), ISFILTERED('Date Table'[Mo_Short])),
         VAR __y = SELECTEDVALUE('Date Table'[Year])

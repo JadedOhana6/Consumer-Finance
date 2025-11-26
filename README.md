@@ -1,6 +1,5 @@
 # Consumer Finance Complaints (incomplete).
-Link to Dashboard : https://app.powerbi.com/reportEmbed?reportId=0ce5f813-bcef-4b36-bc6d-83067141bc91&autoAuth=true&ctid=b065f3d5-e27a-4caf-9216-790f5cdfe5ee
-
+[Link to Dashboard](https://app.powerbi.com/reportEmbed?reportId=0ce5f813-bcef-4b36-bc6d-83067141bc91&autoAuth=true&ctid=b065f3d5-e27a-4caf-9216-790f5cdfe5ee)
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -61,13 +60,10 @@ The following tasks were performed:
 
 ## Interesting Features
 1. Created a button to display all filters. DAX formula below:
-
+```
 SELECTED FILTER CATEGORY = 
-
 VAR Maxfilters = 3
-
 RETURN (
-    
     IF( //Date, Month
         OR(ISFILTERED('Date Table'[Year]), ISFILTERED('Date Table'[Mo_Short])),
         VAR __x = "Year/Month Submitted"
@@ -78,14 +74,10 @@ RETURN (
         VAR __x = "Day"
         RETURN __x & UNICHAR(13) & UNICHAR(10)
     )& ...
-    )
-    
+    )  
 #SELECTED FILTERS = 
-
 VAR Maxfilters = 3
-
-RETURN (
-    
+RETURN (  
     IF( //YEAR & MONTH
         OR(ISFILTERED('Date Table'[Year]), ISFILTERED('Date Table'[Mo_Short])),
         VAR __y = SELECTEDVALUE('Date Table'[Year])
@@ -106,11 +98,14 @@ RETURN (
         RETURN __x & UNICHAR(13) & UNICHAR(10)
     )&...
     )
+```
 2. Added a 'Clear filters' & User guide button
 
 ## Recommendations
 1. More resources can be dedicated to the issue: Overdraft, savings or reward features (under Money Services product).
 2. Shorten the submit-receive time for referral feedback channel (3 days, out of the total 15 days from submit to respond). This will improve the response time for 17.22% of complaints.
+3. There is an overall increase in the number of complaints across time. More resources will be required to handle the growing number of complaints.
+4. Lack of enforcement history correlates with higher reputation scores. However, higher reputation score does not correlate with lower complaints per market share. Improve compliance measures to ensure quality service to customers.
 
 ## Limitations
-Data updated until August 2023. Hence, alot of the complaints submitted at this time will not have been responded to yet. Likewise, average is used when analyzing complaints and response trends. 
+Data updated until August 2023. Hence, alot of the complaints submitted in July/August 2023 will not have been responded to yet. Likewise, average is used when analyzing complaints and response trends. 

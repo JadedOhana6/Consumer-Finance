@@ -16,8 +16,8 @@ This analysis aims to identify patterns in complaints, evaluates company respons
 The CFPB collects complaints from consumers across the United States regarding financial products and services. Each complaint is tracked from submission through company response. The dataset contains consumer complaints spanning multiple financial categories, locations, and companies. 
 
 ### Tools Used
-1. Excel for cleaning & analysis
-2. PowerBI for visualization
+1. Excel for cleaning
+2. PowerBI for visualization & analysis
 
 ### Data Source and Tables
 [ZOOMCHARTS October challenge](https://zoomcharts.com/en/microsoft-power-bi-custom-visuals/challenges/onyx-data-october-2025) 
@@ -38,8 +38,8 @@ The following tasks were performed:
 7. Do company traits (size tier, reputation, enforcement history) correlate with outcomes?
 8. Do submission channels differ in response speed or outcomes?
 
-## Interesting Codes
-1. DAX for displaying filter categories:
+## Interesting Features
+1. Created a button to display all filters. DAX formula below:
 
 SELECTED FILTER CATEGORY = 
 
@@ -85,6 +85,7 @@ RETURN (
         RETURN __x & UNICHAR(13) & UNICHAR(10)
     )&...
     )
-  
+2. Added a 'Clear filters' & User guide button
+
 ## Limitations
 Data updated until August 2023. Hence average is used when analyzing complaints and response trends. 

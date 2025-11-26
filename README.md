@@ -1,4 +1,7 @@
 # Consumer Finance
+Code to report:
+<img width="190" height="217" alt="image" src="https://github.com/user-attachments/assets/e4065eda-c202-4361-a1f5-dd4c4e036240" />
+
 ## Table of Contents
 -	[Project Overview](#project-overview)
 - [Tools Used](#tools-used)
